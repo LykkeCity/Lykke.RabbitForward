@@ -2,8 +2,8 @@ version: '2'
 
 services:
   apirunner:
-    image: lykkedev/payservicewallets:dev
+    image: lykkedev/rabbotwprward:dev
     ports:
-     - "80:4566"
+     - "80:4666"
     environment:
      - SettingsUrl=https://settings-dev.lykkex.net/cdcsdfaregegffds_LykkePayServiceWallet
