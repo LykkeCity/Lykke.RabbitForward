@@ -1,0 +1,29 @@
+﻿{
+    "RabbitForwardService": {
+        "Logs": {
+            "DbConnectionString": "DefaultEndpointsProtocol=https;AccountName=kuberpartnersshared;AccountKey=C1p1Rc03u28dsBcgKZn/dmJjk3+3PUAX5Qc/1gtbqGy9mQzhUi8jWpw3T0up4qf9GMiFRbeChrMBhse9V99GYw==;EndpointSuffix=core.windows.net"
+        },
+        "RabbitForwardList": {
+            "SourceRabbit": {
+                "ConnectionString": "amqp://lykke.history:lykke.history@13.94.249.22:5672",
+                "ExchangeName": "lykke.quotefeed",
+                "QueueName": "marketprofileservice"
+            },
+            "DestinationRabbit": {
+                "ConnectionString": "amqp://lykke.history:lykke.history@52.178.28.186:5672",
+                "ExchangeName": "lykke.quotefeed",
+                "QueueName": "marketprofileservice"
+            },
+            "IsDurable": true
+        }
+
+    },
+    "SlackNotifications": {
+        "AzureQueue": {
+            "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=kuberpartnersshared;AccountKey=C1p1Rc03u28dsBcgKZn/dmJjk3+3PUAX5Qc/1gtbqGy9mQzhUi8jWpw3T0up4qf9GMiFRbeChrMBhse9V99GYw==;EndpointSuffix=core.windows.net",
+            "QueueName": "slack-notifications"
+        },
+        "ThrottlingLimitSeconds": 60
+    }
+
+}

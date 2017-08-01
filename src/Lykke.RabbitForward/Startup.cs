@@ -56,7 +56,8 @@ namespace Lykke.RabbitForward
             });
 
 #if DEBUG
-            var settings = Configuration.Get<ApplicationSettings>();
+            var connectionString = Configuration.GetValue<string>("ConnectionString");
+            var settings = SettingsReader.SettingsReader.ReadGeneralSettings<ApplicationSettings>(connectionString);
 #else
             var settings =  HttpSettingsLoader.Load<ApplicationSettings>();
 #endif
