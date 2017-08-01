@@ -2,7 +2,7 @@ version: '2'
 
 services:
   apirunner:
-    image: lykkedev/rabbotwprward:dev
+    image: lykkedev/rabbitforward:dev
     ports:
      - "80:4666"
     environment:
